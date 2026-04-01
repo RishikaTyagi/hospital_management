@@ -171,7 +171,7 @@ void do_register(int argc, char *argv[]) {
     strncpy(p.dept, dept, sizeof(p.dept)-1); p.dept[sizeof(p.dept)-1]='\0';
     p.severity = atoi(severity_str);
 
-    if (p.severity > 0) {
+    if (p.severity > 6 && p.severity <= 10) {
         insert_emergency(p);
         printf("SUCCESS: Patient registered to Emergency Queue with ID %d\n", p.id);
     } else {

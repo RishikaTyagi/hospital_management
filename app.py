@@ -242,10 +242,10 @@ class HospitalApp(tk.Tk):
                     result_lbl.config(text=res)
                     
         btn = tk.Button(search_frame, text="Search", command=do_search, bg=self.btn_bg, fg=self.btn_fg)
-        btn.pack(side=tk.LEFT, padx=5)
+        btn.pack(side=tk.LEFT, padx=5) 
 
     def show_history(self):
-        self.current_screen = 'history'
+        self.current_screen = 'history' 
         self.clear_container()
         
         title = ttk.Label(self.container, text="Served Patients History", style="Header.TLabel")
